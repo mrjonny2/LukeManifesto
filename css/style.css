@@ -1,11 +1,21 @@
-@import url(http://fonts.googleapis.com/css?family=News+Cycle:400,700);
-html,
+html {
+  background: url(../images/stars.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@font-face {
+    font-family: Franklin Gothic Book;
+    src: url(FranklinGothicBook.ttf);
+}
 body {
   width: 100%;
   height: 100%;
-  font: 700 1em "Franklin Gothic Book";
+  font: 700 2vw "Franklin Gothic Book";
   letter-spacing: .15em;
   color: #ff6;
+  background-image: url("stars.png");
   background: #000;
   overflow: hidden;
   margin: 0;
@@ -27,8 +37,18 @@ body {
 .starwars .start span {
   color: #4bd5ee;
 }
+.starwars .finish {
+  font-size: 200%;
+  width: 14em;
+  margin: -4em 0 0 -7em;
+  text-align: center;
+  cursor: pointer;
+}
+.starwars .finish span {
+  color: #4bd5ee;
+}
 .starwars .intro {
-  width: 15em;
+  width: 17em;
   margin: 0 0 0 -7.5em;
   font-size: 200%;
   font-weight: 400;
@@ -51,7 +71,7 @@ body {
   top: auto;
   bottom: 0;
   height: 50em;
-  font-size: 350%;
+  font-size: 225%;
   text-align: justify;
   overflow: hidden;
   -webkit-transform-origin: 50% 100%;
@@ -152,7 +172,7 @@ body {
     opacity: 1;
   }
   100% {
-    top: -50%;
+    top: -80%;
     opacity: 0;
   }
 }
@@ -165,7 +185,7 @@ body {
     opacity: 1;
   }
   100% {
-    top: -50%;
+    top: -80%;
     opacity: 0;
   }
 }

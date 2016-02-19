@@ -43,6 +43,8 @@ StarWars = (function() {
 
     // Start the animation
     this.start = this.el.find('.start');
+    this.finish = this.el.find('.finish');
+    this.finish.hide();
 
     // The animation wrapper
     this.animation = this.el.find('.animation');
@@ -51,20 +53,21 @@ StarWars = (function() {
     this.reset();
 
     // Start the animation on click
-/*    this.start.bind('click', $.proxy(function() {
+    this.start.bind('click', $.proxy(function() {
       this.start.hide();
       this.audio.play();
       this.el.append(this.animation);
     }, this));
-*/
-      this.start.hide();
-      this.audio.play();
-      this.el.append(this.animation);
 
+/*      this.start.hide();
+      var audio = document.getElementById('audio');
+      audio.play();
+      this.el.append(this.animation);
+*/
     // Reset the animation and shows the start screen
     $(this.audio).bind('ended', $.proxy(function() {
       this.audio.currentTime = 0;
-      this.reset();
+      this.finish.show();
     }, this));
   }
 
